@@ -9,7 +9,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Outfit:wght@300;400;500;600&family=Inconsolata:wght@400;500&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
       --cream:    #f2ede6;
       --cream-2:  #ebe4db;
@@ -26,9 +25,7 @@
       --font-body:    'Outfit', sans-serif;
       --font-mono:    'Inconsolata', monospace;
     }
-
     html { scroll-behavior: smooth; }
-
     body {
       background: var(--cream);
       color: var(--ink);
@@ -37,8 +34,6 @@
       line-height: 1.6;
       overflow-x: hidden;
     }
-
-    /* NAV */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       display: flex; align-items: center; justify-content: space-between;
@@ -71,8 +66,6 @@
       font-weight: 600 !important;
     }
     .nav-cta:hover { background: var(--forest-2) !important; }
-
-    /* HERO */
     .hero {
       position: relative;
       min-height: 100vh;
@@ -180,8 +173,7 @@
       transition: opacity 0.2s, gap 0.2s;
     }
     .btn-ghost:hover { opacity: 1; gap: 0.7rem; }
-    .btn-ghost::after { content: '→'; }
-
+    .btn-ghost::after { content: '\2192'; }
     .hero-stats {
       position: absolute;
       right: 4rem; bottom: 4rem;
@@ -214,8 +206,6 @@
       margin-top: 0.3rem;
       font-family: var(--font-mono);
     }
-
-    /* SECTION SHARED */
     section { padding: 7rem 4rem; }
     .section-label {
       font-family: var(--font-mono);
@@ -240,8 +230,6 @@
       max-width: 510px;
       line-height: 1.78;
     }
-
-    /* HOW IT WORKS */
     .how { background: var(--forest); }
     .how .section-label { color: var(--gold); }
     .how .section-title { color: var(--cream); }
@@ -274,8 +262,6 @@
       margin-bottom: 0.8rem;
     }
     .step p { color: rgba(242,237,230,0.58); font-size: 0.9rem; line-height: 1.78; }
-
-    /* WHY EDGESENSE */
     .why { background: var(--cream-2); }
     .why-inner { max-width: 1100px; margin: 0 auto; }
     .why-header { margin-bottom: 4rem; }
@@ -305,8 +291,6 @@
       letter-spacing: -0.01em;
     }
     .vp p { color: var(--muted); font-size: 0.875rem; line-height: 1.82; }
-
-    /* PRICING / CONTACT */
     .contact { background: var(--cream); }
     .contact-inner {
       max-width: 1100px; margin: 0 auto;
@@ -360,7 +344,6 @@
       font-family: var(--font-mono);
       letter-spacing: 0.03em;
     }
-
     .contact-form .section-title { font-size: 2.2rem; }
     .contact-form .section-sub { margin-bottom: 2.5rem; }
     .form-group { margin-bottom: 1.1rem; }
@@ -397,8 +380,6 @@
     .form-group textarea { height: 100px; resize: none; }
     .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
     .form-submit { width: 100%; margin-top: 0.5rem; }
-
-    /* FOOTER */
     footer { background: var(--forest); padding: 2.8rem 4rem; }
     .footer-inner {
       max-width: 1100px; margin: 0 auto;
@@ -415,14 +396,10 @@
       transition: color 0.2s;
     }
     .footer-links a:hover { color: var(--cream); }
-
-    /* SCROLL ANIMATIONS */
     .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.6s ease, transform 0.6s ease; }
     .reveal.visible { opacity: 1; transform: none; }
     .reveal-delay-1 { transition-delay: 0.1s; }
     .reveal-delay-2 { transition-delay: 0.2s; }
-
-    /* RESPONSIVE */
     @media (max-width: 900px) {
       nav { padding: 1.25rem 2rem; }
       .nav-links { display: none; }
@@ -436,10 +413,16 @@
       .footer-inner { flex-direction: column; gap: 1.5rem; text-align: center; }
     }
   </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CGSFQN88EZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-CGSFQN88EZ');
+  </script>
 </head>
 <body>
-
-  <!-- NAV -->
   <nav>
     <div class="nav-logo">Edge<span>Sense</span></div>
     <ul class="nav-links">
@@ -448,8 +431,6 @@
       <li><a href="#contact" class="nav-cta">Get in touch</a></li>
     </ul>
   </nav>
-
-  <!-- HERO -->
   <section class="hero" id="home">
     <div class="hero-blob"></div>
     <div class="hero-blob-2"></div>
@@ -483,8 +464,6 @@
       </div>
     </div>
   </section>
-
-  <!-- HOW IT WORKS -->
   <section class="how" id="how">
     <div class="how-inner">
       <div class="how-header">
@@ -520,8 +499,6 @@
       </div>
     </div>
   </section>
-
-  <!-- WHY EDGESENSE -->
   <section class="why" id="why">
     <div class="why-inner">
       <div class="why-header">
@@ -560,11 +537,8 @@
       </div>
     </div>
   </section>
-
-  <!-- PRICING + CONTACT -->
   <section class="contact" id="contact">
     <div class="contact-inner">
-
       <div class="pricing-card reveal">
         <div class="pricing-card-header">
           <div class="price-label">Unit Pricing</div>
@@ -583,12 +557,10 @@
           <div class="pricing-note">Running multiple locations? Reach out. We'll work something out.</div>
         </div>
       </div>
-
       <div class="contact-form reveal reveal-delay-1">
         <div class="section-label">Get in Touch</div>
         <h2 class="section-title">Curious if EdgeSense fits your shop?</h2>
         <p class="section-sub">Drop us a note. No sales pressure, no pitch deck. Just an honest conversation about whether this makes sense for you.</p>
-
         <div class="form-grid">
           <div class="form-group">
             <label>First Name</label>
@@ -623,11 +595,8 @@
         </div>
         <button class="btn-primary form-submit">Send us a message</button>
       </div>
-
     </div>
   </section>
-
-  <!-- FOOTER -->
   <footer>
     <div class="footer-inner">
       <div class="footer-logo">Edge<span>Sense</span></div>
@@ -639,7 +608,6 @@
       </div>
     </div>
   </footer>
-
   <script>
     const reveals = document.querySelectorAll('.reveal');
     const observer = new IntersectionObserver((entries) => {
@@ -651,7 +619,6 @@
       });
     }, { threshold: 0.12 });
     reveals.forEach(el => observer.observe(el));
-
     document.querySelector('.form-submit').addEventListener('click', function() {
       this.textContent = "Got it. We'll be in touch soon.";
       this.style.background = '#2f5040';
